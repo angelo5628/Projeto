@@ -3,79 +3,47 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Barra de Navegação Vertical</title>
+<title>Campo de Pesquisa</title>
 <style>
-  /* Estilo para a barra de navegação */
-  .navbar {
-    width: 50px;
-    background-color: #333;
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    padding-top: 20px;
-    transition: width 0.5s;
-  }
-
-  /* Estilo para o ícone de hambúrguer */
-  .barra {
-    width: 30px;
-    height: 4px;
-    background-color: #fff;
-    margin: 6px auto;
-    transition: background-color 0.5s;
-  }
-
-  /* Estilo para as opções do menu */
-  .menu-opcao {
-    display: none;
-    color: #fff;
-    text-decoration: none;
+  /* Estilo para o campo de pesquisa */
+  .campo-pesquisa {
     padding: 10px;
-    transition: background-color 0.5s;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 200px;
+    margin-right: 10px;
   }
 
-  /* Estilo para as opções do menu quando estão visíveis */
-  .menu-opcao.active {
-    display: block;
+  /* Estilo para o botão de busca */
+  .botao-busca {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
   }
 
-  /* Estilo para as opções do menu quando o mouse passa por cima */
-  .menu-opcao:hover {
-    background-color: #555;
+  /* Estilo para o botão de busca quando o mouse passa por cima */
+  .botao-busca:hover {
+    background-color: #45a049;
   }
 </style>
 </head>
 <body>
 
-<!-- Barra de Navegação -->
-<div class="navbar" id="navbar">
-  <div class="barra" onclick="toggleMenu()"></div>
-  <div class="barra" onclick="toggleMenu()"></div>
-  <div class="barra" onclick="toggleMenu()"></div>
-  <a href="#" class="menu-opcao">Opção 1</a>
-  <a href="#" class="menu-opcao">Opção 2</a>
-  <a href="#" class="menu-opcao">Opção 3</a>
-</div>
+<!-- Campo de Pesquisa -->
+<input type="text" id="campoPesquisa" class="campo-pesquisa" placeholder="Digite sua pesquisa">
+<button onclick="buscar()" class="botao-busca">Buscar</button>
 
 <script>
-  // Função para alternar a visibilidade do menu
-  function toggleMenu() {
-    var navbar = document.getElementById('navbar');
-    var menuOpcoes = document.getElementsByClassName('menu-opcao');
-    var i;
-
-    if (navbar.style.width === '200px') {
-      navbar.style.width = '50px';
-      for (i = 0; i < menuOpcoes.length; i++) {
-        menuOpcoes[i].classList.remove('active');
-      }
-    } else {
-      navbar.style.width = '200px';
-      for (i = 0; i < menuOpcoes.length; i++) {
-        menuOpcoes[i].classList.add('active');
-      }
-    }
+  // Função para realizar a busca
+  function buscar() {
+    var termoPesquisa = document.getElementById('campoPesquisa').value;
+    alert('Você buscou por: ' + termoPesquisa);
+    // Aqui você pode adicionar o código para realizar a busca real usando o termoPesquisa
   }
 </script>
 

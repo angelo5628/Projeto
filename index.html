@@ -1,11 +1,45 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>PressNews</title>
-    <link rel="stylesheet" href="luisangeloana.css">
+    <title>PressNews</title>  
+    <link rel="icon" type="image/x-icon" href="https://static.vecteezy.com/system/resources/previews/010/157/349/non_2x/globe-icon-sign-symbol-design-free-png.png">
+    <link rel="stylesheet" href="angeloluisgustavoana.css">
   </head>
   <body>
-    <header class="cabecalho"><img class="logo" src="https://i.ibb.co/xGJPjT0/pressnewssemfundo.png"></header>
-  </body>
-</html>
+    <header class="cabecalho">
+      
+      <div class="navbar" id="navbar">
+        <div class="barra" onclick="toggleMenu()"></div>
+        <div class="barra" onclick="toggleMenu()"></div>
+        <div class="barra" onclick="toggleMenu()"></div>
+        <a href="#" class="menu-opcao">cAAAAAAAAAAAAAAAAAAAAAu</a>
+        <a href="#" class="menu-opcao">cu</a>
+        <a href="#" class="menu-opcao">cu</a>
+      </div>
 
+      <center><img class="logo" src="https://i.ibb.co/xGJPjT0/pressnewssemfundo.png"></center>
+    
+    </header>
+  </body>
+
+  <script>
+    function toggleMenu() {
+      var navbar = document.getElementById('navbar');
+      var menuOpcoes = document.getElementsByClassName('menu-opcao');
+      var i;
+
+      if (navbar.style.width === '200px') {
+        navbar.style.width = '50px';
+        for (i = 0; i < menuOpcoes.length; i++) {
+          menuOpcoes[i].classList.remove('active');
+        }
+      } else {
+        navbar.style.width = '200px';
+        for (i = 0; i < menuOpcoes.length; i++) {
+          menuOpcoes[i].classList.add('active');
+        }
+      }
+    }
+
+  </script>
+</html>

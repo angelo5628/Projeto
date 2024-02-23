@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Campo de Pesquisa</title>
+<title>Pesquisa com Rolagem</title>
 <style>
   /* Estilo para o campo de pesquisa */
   .campo-pesquisa {
@@ -30,6 +30,21 @@
   .botao-busca:hover {
     background-color: #45a049;
   }
+
+  /* Estilo para os itens pesquisáveis */
+  .pesquisavel {
+    color: blue;
+    cursor: pointer;
+  }
+
+  /* Estilo para os itens pesquisáveis quando o mouse passa por cima */
+  .pesquisavel:hover {
+    text-decoration: underline;
+  }
+
+  .espaco {
+    padding-top: 5000px;
+  }
 </style>
 </head>
 <body>
@@ -38,12 +53,32 @@
 <input type="text" id="campoPesquisa" class="campo-pesquisa" placeholder="Digite sua pesquisa">
 <button onclick="buscar()" class="botao-busca">Buscar</button>
 
+<div class="espaco"></div>
+
+<!-- Texto com âncoras -->
+<h2>Texto com âncoras</h2>
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed <span class="pesquisavel" onclick="rolarPara('amet')">amet</span> ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae sapien non magna ultrices finibus. Nullam eu feugiat nisi, id laoreet velit. Fusce in tincidunt lacus, vitae lacinia tortor. Integer quis nulla a urna posuere tincidunt. Aliquam ut ligula ligula. Aliquam a efficitur <span class="pesquisavel" onclick="rolarPara('vitae')">vitae</span> justo vehicula euismod non ut arcu. Donec scelerisque erat vitae lectus aliquet, at lobortis <span class="pesquisavel" onclick="rolarPara('ipsum')">ipsum</span> tempus.
+</p>
+
 <script>
   // Função para realizar a busca
   function buscar() {
     var termoPesquisa = document.getElementById('campoPesquisa').value;
-    alert('Você buscou por: ' + termoPesquisa);
-    // Aqui você pode adicionar o código para realizar a busca real usando o termoPesquisa
+    rolarPara(termoPesquisa);
+  }
+
+  // Função para rolar até a palavra-chave pesquisada
+  function rolarPara(termo) {
+    var elementosPesquisaveis = document.getElementsByClassName('pesquisavel');
+    for (var i = 0; i < elementosPesquisaveis.length; i++) {
+      if (elementosPesquisaveis[i].innerText.toLowerCase().includes(termo.toLowerCase())) {
+        elementosPesquisaveis[i].scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
+        elementosPesquisaveis[i].style.backgroundColor = "yellow"; // Para realçar a palavra-chave encontrada
+        return;
+      }
+    }
+    alert('Nenhuma correspondência encontrada para: ' + termo);
   }
 </script>
 

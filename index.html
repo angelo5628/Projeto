@@ -7,40 +7,78 @@
   </head>
   <body>
     <header class="cabecalho">
-      
       <div class="navbar" onclick="toggleMenu()" id="navbar">
         <div class="tudodentro">
           <div class="barra"></div>
           <div class="barra"></div>
           <div class="barra"></div>
-          <a href="#" class="menu-opcao">cAAAAAAAAAAAAAAAAAAAAAu</a>
+          <a href="#" class="menu-opcao">cAAAAAAAAAAasfAAAAAAAAAAAu</a>
           <a href="#" class="menu-opcao">cu</a>
           <a href="#" class="menu-opcao">cu</a>
         </div>
       </div>
 
       <center><img class="logo" src="https://i.ibb.co/xGJPjT0/pressnewssemfundo.png"></center>
-    
     </header>
+
+    <center><div class="image-container">
+      <span class="close-btn" id="close-btn">×</span>
+      <img id="random-image" src="https://casafreitas2.vteximg.com.br/arquivos/ids/261771/mega%20ofertas%20%201300x300%20(1).png?v=638104245822200000">
+      <img id="random-image" src="https://mercadoeconsumo.com.br/wp-content/uploads/2023/11/Banner-1300x300-MC.png">
+      <img id="random-image" src="https://casafreitas2.vteximg.com.br/arquivos/ids/261692/1300x300%20(5).png?v=638103338836300000">
+      <img id="random-image" src="https://casafreitas2.vteximg.com.br/arquivos/ids/264705/banner%201300x300%20(5).png?v=638173616622500000">
+  </div></center>
+
   </body>
 
   <script>
     function toggleMenu() {
       var navbar = document.getElementById('navbar');
       var menuOpcoes = document.getElementsByClassName('menu-opcao');
+      var closeBtn = document.getElementById('close-btn');
       var i;
   
       if (navbar.style.width === '200px') {
         navbar.style.width = '50px';
         for (i = 0; i < menuOpcoes.length; i++) {
           menuOpcoes[i].classList.remove('active');
-        }
+        } 
       } else {
         navbar.style.width = '200px';
         for (i = 0; i < menuOpcoes.length; i++) {
           menuOpcoes[i].classList.add('active');
         }
       }
+      
     }
   </script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var images = [
+            'https://casafreitas2.vteximg.com.br/arquivos/ids/261771/mega%20ofertas%20%201300x300%20(1).png?v=638104245822200000',
+            'https://mercadoeconsumo.com.br/wp-content/uploads/2023/11/Banner-1300x300-MC.png',
+            'https://casafreitas2.vteximg.com.br/arquivos/ids/261692/1300x300%20(5).png?v=638103338836300000',
+            'https://casafreitas2.vteximg.com.br/arquivos/ids/264705/banner%201300x300%20(5).png?v=638173616622500000'
+        ];
+
+        var randomIndex = Math.floor(Math.random() * images.length);
+        var randomImage = images[randomIndex];
+
+        var imgElement = document.getElementById('random-image');
+        var closeBtn = document.getElementById('close-btn');
+
+        imgElement.src = randomImage;
+
+        closeBtn.addEventListener('click', function() {
+            imgElement.src = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMIAAAEDCAMAAABQ/CumAAAAA1BMVEX///+nxBvIAAAASElEQVR4nO3BAQ0AAADCoPdPbQ43oAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIB7A8VJAAEcmy75AAAAAElFTkSuQmCC';
+            closeBtn.style.display = 'none';
+        });
+    });
+  </script>
+
 </html>
+
+
+
+        

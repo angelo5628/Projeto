@@ -1,86 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pesquisa com Rolagem</title>
-<style>
-  /* Estilo para o campo de pesquisa */
-  .campo-pesquisa {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-    width: 200px;
-    margin-right: 10px;
-  }
-
-  /* Estilo para o botão de busca */
-  .botao-busca {
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-  }
-
-  /* Estilo para o botão de busca quando o mouse passa por cima */
-  .botao-busca:hover {
-    background-color: #45a049;
-  }
-
-  /* Estilo para os itens pesquisáveis */
-  .pesquisavel {
-    color: blue;
-    cursor: pointer;
-  }
-
-  /* Estilo para os itens pesquisáveis quando o mouse passa por cima */
-  .pesquisavel:hover {
-    text-decoration: underline;
-  }
-
-  .espaco {
-    padding-top: 5000px;
-  }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Image</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div class="image-container">
+        <img id="random-image" src="https://cc-prod.scene7.com/is/image/CCProdAuthor/FF-SEO-text-to-image-marquee-mobile-2x?$pjpeg$&jpegSize=100&wid=600" alt="Random Image">
+        <img id="random-image" src="https://s2-techtudo.glbimg.com/L9wb1xt7tjjL-Ocvos-Ju0tVmfc=/0x0:1200x800/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_08fbf48bc0524877943fe86e43087e7a/internal_photos/bs/2023/q/l/TIdfl2SA6J16XZAy56Mw/canvaai.png" alt="Random Image">
+        <img id="random-image" src="https://cbissn.ibict.br/images/phocagallery/galeria2/thumbs/phoca_thumb_l_image03_grd.png" alt="Random Image">
+        <img id="random-image" src="https://cdn.pixabay.com/photo/2016/05/05/02/37/sunset-1373171_1280.jpg" alt="Random Image">
+    </div>
+    <script src="script.js"></script>
+</body>
 
-<!-- Campo de Pesquisa -->
-<input type="text" id="campoPesquisa" class="campo-pesquisa" placeholder="Digite sua pesquisa">
-<button onclick="buscar()" class="botao-busca">Buscar</button>
+<style>
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
 
-<div class="espaco"></div>
+.image-container {
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+}
 
-<!-- Texto com âncoras -->
-<h2>Texto com âncoras</h2>
-<p>
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed <span class="pesquisavel" onclick="rolarPara('amet')">amet</span> ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae sapien non magna ultrices finibus. Nullam eu feugiat nisi, id laoreet velit. Fusce in tincidunt lacus, vitae lacinia tortor. Integer quis nulla a urna posuere tincidunt. Aliquam ut ligula ligula. Aliquam a efficitur <span class="pesquisavel" onclick="rolarPara('vitae')">vitae</span> justo vehicula euismod non ut arcu. Donec scelerisque erat vitae lectus aliquet, at lobortis <span class="pesquisavel" onclick="rolarPara('ipsum')">ipsum</span> tempus.
-</p>
+#random-image {
+    width: 100%;
+    height: auto;
+}
+
+</style>
 
 <script>
-  // Função para realizar a busca
-  function buscar() {
-    var termoPesquisa = document.getElementById('campoPesquisa').value;
-    rolarPara(termoPesquisa);
-  }
+    document.addEventListener('DOMContentLoaded', function() {
+    var images = [
+        'https://cc-prod.scene7.com/is/image/CCProdAuthor/FF-SEO-text-to-image-marquee-mobile-2x?$pjpeg$&jpegSize=100&wid=600',
+        'https://s2-techtudo.glbimg.com/L9wb1xt7tjjL-Ocvos-Ju0tVmfc=/0x0:1200x800/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_08fbf48bc0524877943fe86e43087e7a/internal_photos/bs/2023/q/l/TIdfl2SA6J16XZAy56Mw/canvaai.png',
+        'https://cbissn.ibict.br/images/phocagallery/galeria2/thumbs/phoca_thumb_l_image03_grd.png  ',
+        'https://cdn.pixabay.com/photo/2016/05/05/02/37/sunset-1373171_1280.jpg',
+        'image5.jpg'
+    ];
 
-  // Função para rolar até a palavra-chave pesquisada
-  function rolarPara(termo) {
-    var elementosPesquisaveis = document.getElementsByClassName('pesquisavel');
-    for (var i = 0; i < elementosPesquisaveis.length; i++) {
-      if (elementosPesquisaveis[i].innerText.toLowerCase().includes(termo.toLowerCase())) {
-        elementosPesquisaveis[i].scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
-        elementosPesquisaveis[i].style.backgroundColor = "yellow"; // Para realçar a palavra-chave encontrada
-        return;
-      }
-    }
-    alert('Nenhuma correspondência encontrada para: ' + termo);
-  }
+    var randomIndex = Math.floor(Math.random() * images.length);
+    var randomImage = images[randomIndex];
+
+    var imgElement = document.getElementById('random-image');
+    imgElement.src = randomImage;
+});
 </script>
-
-</body>
-</html>
+    </html>

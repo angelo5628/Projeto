@@ -4,22 +4,21 @@
     <title>PressNews</title>  
     <link rel="icon" type="image/x-icon" href="https://static.vecteezy.com/system/resources/previews/010/157/349/non_2x/globe-icon-sign-symbol-design-free-png.png">
     <link rel="stylesheet" href="angeloluisgustavoana.css">
-    <link rel="stylesheet" href="contatos.html">
   </head>
   <body>
     <header class="cabecalho">
       
-      <div class="navbar" id="navbar">
-        <div class="barra" onclick="toggleMenu()"></div>
-        <div class="barra" onclick="toggleMenu()"></div>
-        <div class="barra" onclick="toggleMenu()"></div>
-        <a href="#" class="menu-opcao">cAAAAAAAAAAAAAAAAAAAAAu</a>
-        <a href="#" class="menu-opcao">cu</a>
-        <a href="#" class="menu-opcao">cu</a>
+      <div class="navbar" onclick="toggleMenu()" id="navbar">
+        <div class="tudodentro">
+          <div class="barra"></div>
+          <div class="barra"></div>
+          <div class="barra"></div>
+          <a href="#" class="menu-opcao">cAAAAAAAAAAAAAAAAAAAAAu</a>
+          <a href="#" class="menu-opcao">cu</a>
+          <a href="#" class="menu-opcao">cu</a>
+        </div>
       </div>
 
-      <a href="contatos.html" target="_blank">Contatos</a>
-      
       <center><img class="logo" src="https://i.ibb.co/xGJPjT0/pressnewssemfundo.png"></center>
     
     </header>
@@ -30,7 +29,7 @@
       var navbar = document.getElementById('navbar');
       var menuOpcoes = document.getElementsByClassName('menu-opcao');
       var i;
-
+  
       if (navbar.style.width === '200px') {
         navbar.style.width = '50px';
         for (i = 0; i < menuOpcoes.length; i++) {
@@ -43,6 +42,5 @@
         }
       }
     }
-
   </script>
 </html>

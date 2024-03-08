@@ -1,0 +1,88 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+.cabecalho {
+    padding: 30px;
+    background: linear-gradient(to left, #4845f5, cyan);
+  }
+  .navbar {
+    width: 50px;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    padding-top: 20px;
+    transition: width 0.5s;
+  }
+
+  .tudodentro {
+    cursor: pointer;
+  }
+
+  .barra {
+    width: 30px;
+    height: 4px;
+    background-color: #fff;
+    margin: 6px auto;
+    transition: background-color 0.5s;
+  }
+
+  .menu-opcao {
+    display: none;
+    color: #fff;
+    text-decoration: none;
+    text-align: left;
+    padding: 20px;
+    transition: background-color 0.5s;
+    font-family: monospace;
+    font-size: 15px;
+  }
+
+  .menu-opcao.active {
+    display: block;
+  }
+  
+  .menu-opcao:hover {
+    background-color: #555;
+  }
+  
+ .image-container {
+  position: relative;
+  top: 50px;
+  width: 1000px;
+  height: 300px;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+#random-image {
+  width: 100%;
+  height: auto;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  color: #fff;
+  cursor: pointer;
+}
+
+
+.vinijunior{
+  width: 1000px;
+ height: 300px;
+  }

@@ -1,71 +1,71 @@
-cabecalho {
+.cabecalho {
     padding: 30px;
     background: linear-gradient(to left, #4845f5, cyan);
-  }
+}
 
 .navbar {
-  width: 50px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  padding-top: 20px;
-  transition: width 0.5s;
+    width: 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    padding-top: 20px;
+    transition: width 0.5s;
 }
 
 .tudodentro {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 .barra {
-  width: 30px;
-  height: 4px;
-  background-color: #ffffff;
-  margin: 6px auto;
-  transition: background-color 0.5s;
+    width: 30px;
+    height: 4px;
+    background-color: #ffffff;
+    margin: 6px auto;
+    transition: background-color 0.5s;
 }
 
 .menu-opcao {
-  display: none;
-  color: #000000;
-  text-decoration: none;
-  text-align: left;
-  padding: 20px;
-  transition: background-color 0.5s;
-  font-family: monospace;
-  background-color: rgb(255, 255, 255);
-  font-size: 15px;
+    display: none;
+    color: #000000;
+    text-decoration: none;
+    text-align: left;
+    padding: 20px;
+    transition: background-color 0.5s;
+    font-family: monospace;
+    background-color: rgb(255, 255, 255);
+    font-size: 15px;
 }
 
 .menu-opcao.active {
-  display: block;
+    display: block;
 }
 
 .menu-opcao:hover {
-  background-color: #555;
+    background-color: #555;
 }
 
 .image-container {
-  position: relative;
-  top: 50px;
-  width: 1300px;
-  height: 300px;
-  object-fit: cover;
-  overflow: hidden;
+    position: relative;
+    top: 50px;
+    width: 1300px;
+    height: 300px;
+    object-fit: cover;
+    overflow: hidden;
 }
 
 #random-image {
-  width: 100%;
-  height: auto;
+    width: 100%;
+    height: auto;
 }
 
 .close-btn {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 20px;
-  color: #fff;
-  cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
 }
 
 .rodape {
@@ -76,6 +76,7 @@ cabecalho {
     padding: 30px;
     bottom: 0px;
 }
+
 .container {
     width: 80%;
     max-width: 600px;
@@ -88,13 +89,12 @@ cabecalho {
 }
 
 .container form {
-    display: inline-block; /* Impede que o formulário ocupe toda a largura */
+    width: 100%; /* Agora o formulário ocupará toda a largura do container */
     text-align: left; /* Alinha o texto do formulário à esquerda */
 }
 
 .form-group {
     margin-bottom: 20px;
-    text-align: left; /* Alinha os rótulos dos campos à esquerda */
 }
 
 label {
@@ -106,7 +106,7 @@ label {
 input[type="text"],
 input[type="email"],
 textarea {
-    width: 100%;
+    width: calc(100% - 22px); /* Calcula a largura do campo considerando o padding e a borda */
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;

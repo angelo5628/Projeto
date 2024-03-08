@@ -10,7 +10,6 @@ body {
 
 .navbar {
   width: 50px;
-  background-color: #333;
   position: fixed;
   top: 0;
   left: 0;
@@ -26,19 +25,20 @@ body {
 .barra {
   width: 30px;
   height: 4px;
-  background-color: #fff;
+  background-color: #ffffff;
   margin: 6px auto;
   transition: background-color 0.5s;
 }
 
 .menu-opcao {
   display: none;
-  color: #fff;
+  color: #a19191;
   text-decoration: none;
   text-align: left;
   padding: 20px;
   transition: background-color 0.5s;
   font-family: monospace;
+  background-color: black;
   font-size: 15px;
 }
 
@@ -197,5 +197,51 @@ body {
 }
 
 .bateriaimagem {
-  
+  position: absolute;
+  top: 1045px;
+  left: 1090px;
+  object-fit: cover;
+  width: 680px;
+  max-height: 360px;
+}
+
+.sombra3 {
+  position: absolute;
+  background-color: black;
+  width: 680px;
+  height: 360px;
+  opacity: 0.4;
+  left: 1090px;
+  top: 1045px;
+
+}
+
+.bateri {
+  position: absolute;
+  font-family: monospace;
+  font-size: 26px;
+  left: 1111px;
+  top: 1150px;
+  color: white;
+  text-shadow: -1px 1px 2px #000,  
+                1px 2px 6px #000,
+                1px -1px 0 #000,
+                -1px -1px 0 #000;
+  padding: 0px;
+  margin: 0px;  
+}
+
+.batata {
+  position: absolute;
+  font-family: monospace;
+  font-size: 15px;
+  left: 1111px;
+  top: 1280px;
+  color: white;
+  text-shadow: -1px 1px 2px #000,  
+                1px 2px 6px #000,
+                1px -1px 0 #000,
+                -1px -1px 0 #000;
+  padding: 0px;
+  margin: 0px;
 }

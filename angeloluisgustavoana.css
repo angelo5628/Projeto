@@ -32,13 +32,13 @@ body {
 
 .menu-opcao {
   display: none;
-  color: #a19191;
+  color: #000000;
   text-decoration: none;
   text-align: left;
   padding: 20px;
   transition: background-color 0.5s;
   font-family: monospace;
-  background-color: black;
+  background-color: rgb(255, 255, 255);
   font-size: 15px;
 }
 

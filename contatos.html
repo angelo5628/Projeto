@@ -4,36 +4,105 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-
-        h1 {
-            color: #333;
-        }
-
-        p {
-            color: #666;
-        }
-    </style>
+    <link rel="icon" type="image/x-icon" href="https://static.vecteezy.com/system/resources/previews/010/157/349/non_2x/globe-icon-sign-symbol-design-free-png.png">
+    <link rel="stylesheet" href="contatos.css">
+    
 </head>
 <body>
-
-    <h1>About Us</h1>
-
-    <p>Welcome to our website! We are a team of passionate individuals dedicated to providing valuable information and resources. Our mission is to...</p>
-
-    <p id="demo">Click the button to change this text.</p>
-
-    <button type="button" onclick="changeText()">Change Text</button>
-
+    <header class="cabecalho">
+        <div class="navbar" onclick="toggleMenu()" id="navbar">
+          <div class="tudodentro">
+            <div class="barra"></div>
+            <div class="barra"></div>
+            <div class="barra"></div>
+            <a href="#" class="menu-opcao">Jogos</a>
+            <a href="#" class="menu-opcao">Esportes</a>
+            <a href="#" class="menu-opcao">Política <br>Internacional</a>
+            <a href="#" class="menu-opcao">Ciência e <br>Tecnologia</a>
+            <a href="#" class="menu-opcao">Saúde</a>
+            <a href="#" class="menu-opcao">Assuntos do <br>momento</a>
+            <a href="#" class="menu-opcao">Economia e <br>Finanças</a>
+            <a href="#" class="menu-opcao">Meio Ambiente e <br>Sustentabilidade</a>
+            <a href="#" class="menu-opcao">Educação</a>
+            <a href="#" class="menu-opcao">Moda e Estilo</a>
+            <a href="#" class="menu-opcao">História e Cultura</a>
+            <a href="#" class="menu-opcao">Artes e Literatura</a>
+          </div>
+        </div>
+  
+        <center><img class="logo" src="https://i.ibb.co/xGJPjT0/pressnewssemfundo.png"></center>
+      </header>
+  
+      <center><div class="image-container">
+        <span class="close-btn" id="close-btn">×</span>
+        <img id="random-image" src="https://casafreitas2.vteximg.com.br/arquivos/ids/262306/Banner%20principal%201300X300.jpg?v=638127592836830000">
+        <img id="random-image" src="https://cdn-repercussaoparanhana.nuneshost.com/wp-content/uploads/2021/08/THE-PETIT-1300X300.png">
+        <img id="random-image" src="https://casafreitas2.vteximg.com.br/arquivos/ids/255366/1300x300.png?v=638070759354630000">
+        <img id="random-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDe_y8ATwOpICqLFlMlRT4ekQPNW_mcxFtHFKDoxdZ4-qD0RcFuoYya7KkN7LZGcf03g&usqp=CAU">
+    </div></center>
+  
     <script>
-        function changeText() {
-            document.getElementById("demo").innerHTML = "Text changed using JavaScript!";
+        function toggleMenu() {
+          var navbar = document.getElementById('navbar');
+          var menuOpcoes = document.getElementsByClassName('menu-opcao');
+          var closeBtn = document.getElementById('close-btn');
+          var i;
+      
+          if (navbar.style.width === '200px') {
+            navbar.style.width = '50px';
+            for (i = 0; i < menuOpcoes.length; i++) {
+              menuOpcoes[i].classList.remove('active');
+            } 
+          } else {
+            navbar.style.width = '200px';
+            for (i = 0; i < menuOpcoes.length; i++) {
+              menuOpcoes[i].classList.add('active');
+            }
+          }
+          
         }
-    </script>
+      </script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var images = [
+            'https://casafreitas2.vteximg.com.br/arquivos/ids/262306/Banner%20principal%201300X300.jpg?v=638127592836830000',
+            'https://cdn-repercussaoparanhana.nuneshost.com/wp-content/uploads/2021/08/THE-PETIT-1300X300.png',
+            'https://casafreitas2.vteximg.com.br/arquivos/ids/255366/1300x300.png?v=638070759354630000',
+            ''
+        ];
 
+        var randomIndex = Math.floor(Math.random() * images.length);
+        var randomImage = images[randomIndex];
+
+        var imgElement = document.getElementById('random-image');
+        var closeBtn = document.getElementById('close-btn');
+
+        imgElement.src = randomImage;
+
+        closeBtn.addEventListener('click', function() {
+            imgElement.src = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMIAAAEDCAMAAABQ/CumAAAAA1BMVEX///+nxBvIAAAASElEQVR4nO3BAQ0AAADCoPdPbQ43oAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIB7A8VJAAEcmy75AAAAAElFTkSuQmCC';
+            closeBtn.style.display = 'none';
+        });
+    });
+  </script> 
+
+ <div class="container">
+ <h2>Enviar Mensagem</h2>
+ <form action="enviar.php" method="POST">
+     <div class="form-group">
+         <label for="nome">Nome:</label>
+         <input type="text" id="nome" name="nome" required>
+     </div>
+     <div class="form-group">
+         <label for="email">E-mail:</label>
+         <input type="email" id="email" name="email" required>
+     </div>
+     <div class="form-group">
+         <label for="mensagem">Mensagem:</label>
+         <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+     </div>
+     <button type="submit">Enviar</button>
+ </form>
+</div>  
 </body>
 </html>

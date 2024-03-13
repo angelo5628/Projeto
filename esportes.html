@@ -88,9 +88,47 @@
   </script>
   
   
-        
-        <img class="vinijunior" src="https://assets.goal.com/v3/assets/bltcc7a7ffd2fbf71f5/blt73e180ab0b600541/63d31830f5214e4558b655ab/Vinicius(1).jpg?auto=webp&format=pjpg&width=3840&quality=60">
+  <div class="carousel">
+    <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+    <div class="slides">
+        <img class="slide" src="https://img.nsctotal.com.br/wp-content/uploads/2023/12/Veja-a-lista-completa-dos-15-jogadores-de-futebol-do-mundo-que-valem-mais-de-100-milhoes-de-euros.jpg" alt="Image 1">
+        <img class="slide" src="https://assets.goal.com/v3/assets/bltcc7a7ffd2fbf71f5/blt70677f4a38bc9372/625365bea989890609dee04d/51955792789_891640c845_o.jpg?auto=webp&format=pjpg&width=3840&quality=60" alt="Image 2">
+        <img class="slide" src="https://distritodoesporte.com/wp-content/uploads/endrick_sao_paulo_palmeiras_brasileirao_2023-aspect-ratio-512-320.webp" alt="Image 3">
+        <img class="slide" src="https://media-manager.noticiasaominuto.com.br/1920/naom_6597c798576c9.jpeg" alt="Image 4">
+        <img class="slide" src="https://cdn.folhape.com.br/img/pc/1100/1/dn_arquivo/2022/01/aaaaaaasssss.jpg" alt="Image 5">
+        <img class="slide" src="https://www.otempo.com.br/image/contentid/policy:1.3311718:1709820699/Vini-Jr-no-classico-jfif.jfif?f=3x2&w=1224" alt="Image 6">
+    </div>
+    <button class="next" onclick="moveSlide(1)">&#10095;</button>
+</div>
+
+<script>
+
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        let slides = document.getElementsByClassName("slide");
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {
+            slideIndex = 1;
+        }
+        slides[slideIndex - 1].style.display = "block";
+        setTimeout(showSlides, 5000); // Change image every 2 seconds
+    }
+
+    function moveSlide(n) {
+        slideIndex += n;
+        showSlides();
+    }
+   
+</script>
+    
 
     
 </body>
 </html>
+
+

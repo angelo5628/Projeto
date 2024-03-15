@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us</title>
     <link rel="icon" type="image/x-icon" href="https://static.vecteezy.com/system/resources/previews/010/157/349/non_2x/globe-icon-sign-symbol-design-free-png.png">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="contatos.css">
     
 </head>
@@ -89,6 +90,7 @@
 
  <div class="container">
  <h2>Enviar Mensagem</h2>
+ 
  <form action="enviar.php" method="POST">
      <div class="form-group">
          <label for="nome">Nome:</label>
@@ -98,6 +100,14 @@
          <label for="email">E-mail:</label>
          <input type="email" id="email" name="email" required>
      </div>
+     <div class="form-group">
+      <label for="cep">CEP:</label>
+      <input placeholder="xxxxx-xxx" maxlength="9" type="number" id="cep" name="cep" required>
+  </div>
+     <div class="form-group">
+        <label for="enredeco">Endereço:</label>
+        <input type="text" id="endereco" name="endereco" required>
+    </div>
      <div class="form-group">
          <label for="mensagem">Mensagem:</label>
          <textarea id="mensagem" name="mensagem" rows="4" required></textarea>

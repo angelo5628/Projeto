@@ -65,7 +65,14 @@
 
             </h2>
            </header>
-</center>
+
+     <center><div class="image-container">
+    <span class="close-btn" id="close-btn">×</span>
+    <img id="random-image" src="">
+    <img id="random-image" src="">
+    <img id="random-image" src="">
+    <img id="random-image" src="">
+ </div></center>
 </body>
 <script>
     function toggleMenu() {
@@ -88,6 +95,29 @@
       
     }
   </script>
+    <script>
+  document.addEventListener('DOMContentLoaded', function() {
+      var images = [
+          '',
+          '',
+          '',
+          ''
+      ];
+
+      var randomIndex = Math.floor(Math.random() * images.length);
+      var randomImage = images[randomIndex];
+
+      var imgElement = document.getElementById('random-image');
+      var closeBtn = document.getElementById('close-btn');
+
+      imgElement.src = randomImage;
+
+      closeBtn.addEventListener('click', function() {
+          imgElement.src = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMIAAAEDCAMAAABQ/CumAAAAA1BMVEX///+nxBvIAAAASElEQVR4nO3BAQ0AAADCoPdPbQ43oAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIB7A8VJAAEcmy75AAAAAElFTkSuQmCC';
+          closeBtn.style.display = 'none';
+      });
+  });
+</script>
 <style>
 body {
         margin: 0px;

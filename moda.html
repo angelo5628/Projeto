@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moda</title>
+    <link rel="icon" type="image/x-icon" href="https://i.ibb.co/sWJqFBd/pressnewzinhosemfundo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="angeloluisgustavoana.css">
+    <link rel="stylesheet" href="jogos.html">
+    <link rel="stylesheet" href="contatos.html">
+    <link rel="stylesheet" href="esportes.html">
+    <link rel="stylesheet" href="cidade.html">
+    <link rel="stylesheet" href="bateria.html">
+</head>
+<body>
+    <header class="cabecalho">
+        <div class="navbar" onclick="toggleMenu()" id="navbar">
+          <div class="tudodentro">
+            <div class="barra"></div>
+            <div class="barra"></div>
+            <div class="barra"></div>
+            <a href="jogos.html" class="menu-opcao">Jogos</a>
+            <a href="esportes.html" class="menu-opcao">Esportes</a>
+            <a href="#" class="menu-opcao">Política <br>Internacional</a>
+            <a href="#" class="menu-opcao">Ciência e <br>Tecnologia</a> 
+            <a href="#" class="menu-opcao">Saúde</a>
+            <a href="#" class="menu-opcao">Assuntos do <br>momento</a>
+            <a href="#" class="menu-opcao">Economia e <br>Finanças</a>
+            <a href="#" class="menu-opcao">Meio Ambiente e <br>Sustentabilidade</a>
+            <a href="#" class="menu-opcao">Educação</a>
+            <a href="#" class="menu-opcao">Moda e Estilo</a>
+            <a href="#" class="menu-opcao">História e Cultura</a>
+            <a href="cidade.html" class="menu-opcao">Artes e Literatura</a>
+            <a href="contatos.html" class="menu-opcao">Contatos</a>
+          </div>
+        </div>
+
+        <center><a href="index.html"><img class="logo" src="https://i.ibb.co/xGJPjT0/pressnewssemfundo.png"></a></center>
+    </header>
+
+    
+        <header class="">
+          
+  <center><div class="image-container">
+    <span class="close-btn" id="close-btn">×</span>
+    <img id="random-image" src="https://storage.googleapis.com/portal-da-promo/L01_banner_promocaovivo-recargapremiada-20231685727270258.webp">
+    <img id="random-image" src="https://www.queroapostar.com/wp-content/uploads/2023/09/banner-betano-promo-ws.jpg">
+    <img id="random-image" src="https://www.fadminas.org.br/novo_site/wp-content/uploads/2022/06/Banner-Site-Atualizado.jpg">
+    <img id="random-image" src="https://www.totalmedios.com/img/noticias/2021/07/60f1a1bc03c47__838x390.jpg">
+ </div></center>
+
+        </header>
+  
+
+</body>
+<script>
+    function toggleMenu() {
+      var navbar = document.getElementById('navbar');
+      var menuOpcoes = document.getElementsByClassName('menu-opcao');
+      var closeBtn = document.getElementById('close-btn');
+      var i;
+  
+      if (navbar.style.width === '200px') {
+        navbar.style.width = '50px';
+        for (i = 0; i < menuOpcoes.length; i++) {
+          menuOpcoes[i].classList.remove('active');
+        } 
+      } else {
+        navbar.style.width = '200px';
+        for (i = 0; i < menuOpcoes.length; i++) {
+          menuOpcoes[i].classList.add('active');
+        }
+      }
+      
+    }
+  </script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+      var images = [
+          'https://storage.googleapis.com/portal-da-promo/L01_banner_promocaovivo-recargapremiada-20231685727270258.webp',
+          'https://www.queroapostar.com/wp-content/uploads/2023/09/banner-betano-promo-ws.jpg',
+          'https://www.fadminas.org.br/novo_site/wp-content/uploads/2022/06/Banner-Site-Atualizado.jpg',
+          'https://www.totalmedios.com/img/noticias/2021/07/60f1a1bc03c47__838x390.jpg'
+      ];
+
+      var randomIndex = Math.floor(Math.random() * images.length);
+      var randomImage = images[randomIndex];
+
+      var imgElement = document.getElementById('random-image');
+      var closeBtn = document.getElementById('close-btn');
+
+      imgElement.src = randomImage;
+
+      closeBtn.addEventListener('click', function() {
+          imgElement.src = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMIAAAEDCAMAAABQ/CumAAAAA1BMVEX///+nxBvIAAAASElEQVR4nO3BAQ0AAADCoPdPbQ43oAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIB7A8VJAAEcmy75AAAAAElFTkSuQmCC';
+          closeBtn.style.display = 'none';
+      });
+  });
+</script>
+  <style>
+       body {
+        margin: 0px;
+        padding: 0px;
+    }
+    
+  </style>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

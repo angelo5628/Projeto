@@ -3,37 +3,43 @@
   <head>
     <title>PressNews</title>  
     <link rel="icon" type="image/x-icon" href="https://i.ibb.co/sWJqFBd/pressnewzinhosemfundo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="angeloluisgustavoana.css">
     <link rel="stylesheet" href="jogos.html">
     <link rel="stylesheet" href="contatos.html">
     <link rel="stylesheet" href="esportes.html">
     <link rel="stylesheet" href="cidade.html">
     <link rel="stylesheet" href="bateria.html">
+    <link rel="stylesheet" href="saude.html">
   </head>
   <body>
     <header class="cabecalho">
-      <div class="navbar" onclick="toggleMenu()" id="navbar">
-        <div class="tudodentro">
-          <div class="barra"></div>
-          <div class="barra"></div>
-          <div class="barra"></div>
-          <a href="jogos.html" class="menu-opcao">Jogos</a>
-          <a href="esportes.html" class="menu-opcao">Esportes</a>
-          <a href="#" class="menu-opcao">Política <br>Internacional</a>
-          <a href="#" class="menu-opcao">Ciência e <br>Tecnologia</a> 
-          <a href="#" class="menu-opcao">Saúde</a>
-          <a href="#" class="menu-opcao">Assuntos do <br>momento</a>
-          <a href="#" class="menu-opcao">Economia e <br>Finanças</a>
-          <a href="bateria.html" class="menu-opcao">Meio Ambiente e <br>Sustentabilidade</a>
-          <a href="#" class="menu-opcao">Educação</a>
-          <a href="moda.html" class="menu-opcao">Moda e Estilo</a>
-          <a href="#" class="menu-opcao">História e Cultura</a>
-          <a href="cidade.html" class="menu-opcao">Artes e Literatura</a>
-          <a href="contatos.html" class="menu-opcao">Contatos</a>
-        </div>
+
+      <div class="overlay" onclick="closeNav()"></div>
+
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="jogos.html" class="menu-opcao">Jogos</a>
+        <a href="esportes.html" class="menu-opcao">Esportes</a>
+        <a href="#" class="menu-opcao">Política <br>Internacional</a>
+        <a href="#" class="menu-opcao">Ciência e <br>Tecnologia</a> 
+        <a href="saude.html" class="menu-opcao">Saúde</a>
+        <a href="#" class="menu-opcao">Assuntos do <br>momento</a>
+        <a href="#" class="menu-opcao">Economia e <br>Finanças</a>
+        <a href="#" class="menu-opcao">Meio Ambiente e <br>Sustentabilidade</a>
+        <a href="#" class="menu-opcao">Educação</a>
+        <a href="moda.html" class="menu-opcao">Moda e Estilo</a>
+        <a href="#" class="menu-opcao">História e Cultura</a>
+        <a href="cidade.html" class="menu-opcao">Artes e Literatura</a>
+        <a href="contatos.html" class="menu-opcao">Contatos</a>
       </div>
 
+      <div id="main">
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+      </div>
+      
       <center><img class="logo" src="https://i.ibb.co/xGJPjT0/pressnewssemfundo.png"></center>
+
     </header>
 
     <center><div class="image-container">
@@ -74,26 +80,18 @@
   </body>
 
   <script>
-    function toggleMenu() {
-      var navbar = document.getElementById('navbar');
-      var menuOpcoes = document.getElementsByClassName('menu-opcao');
-      var closeBtn = document.getElementById('close-btn');
-      var i;
-  
-      if (navbar.style.width === '200px') {
-        navbar.style.width = '50px';
-        for (i = 0; i < menuOpcoes.length; i++) {
-          menuOpcoes[i].classList.remove('active');
-        } 
-      } else {
-        navbar.style.width = '200px';
-        for (i = 0; i < menuOpcoes.length; i++) {
-          menuOpcoes[i].classList.add('active');
-        }
-      }
-      
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+      document.getElementById("main").style.marginLeft = "250px";
+      document.querySelector(".overlay").style.display = "block";
     }
-  </script>
+    
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+      document.getElementById("main").style.marginLeft= "0";
+      document.querySelector(".overlay").style.display = "none";
+    }
+    </script>
 
   <script>
     document.addEventListener('DOMContentLoaded', function() {

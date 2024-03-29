@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teletransporte</title>
+    <link rel="icon" type="image/x-icon" href="https://i.ibb.co/sWJqFBd/pressnewzinhosemfundo.png">
+</head>
+
+    <header class="cabecalho">
+
+        <div class="overlay" onclick="closeNav()"></div>
+  
+        <div id="mySidenav" class="sidenav">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <a href="jogos.html" class="menu-opcao">Jogos</a>
+          <a href="esportes.html" class="menu-opcao">Esportes</a>
+          <a href="#" class="menu-opcao">Política <br>Internacional</a>
+          <a href="#" class="menu-opcao">Ciência e <br>Tecnologia</a> 
+          <a href="saude.html" class="menu-opcao">Saúde</a>
+          <a href="#" class="menu-opcao">Assuntos do <br>momento</a>
+          <a href="#" class="menu-opcao">Economia e <br>Finanças</a>
+          <a href="#" class="menu-opcao">Meio Ambiente e <br>Sustentabilidade</a>
+          <a href="#" class="menu-opcao">Educação</a>
+          <a href="moda.html" class="menu-opcao">Moda e Estilo</a>
+          <a href="#" class="menu-opcao">História e Cultura</a>
+          <a href="cidade.html" class="menu-opcao">Artes e Literatura</a>
+          <a href="contatos.html" class="menu-opcao">Contatos</a>
+        </div>
+  
+        <div id="main">
+          <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+        </div>
+        
+        <center><a href="index.html"><img class="logo" src="https://i.ibb.co/xGJPjT0/pressnewssemfundo.png"></a></center>
+
+</header>
+
+<script>
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+      document.getElementById("main").style.marginLeft = "250px";
+      document.querySelector(".overlay").style.display = "block";
+    }
+    
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+      document.getElementById("main").style.marginLeft= "0";
+      document.querySelector(".overlay").style.display = "none";
+    }
+  </script>
+
+<body>
+   
+ <div class="noticia">
+    <h1>Cientistas Anunciam Avanço Revolucionário na Tecnologia de Teletransporte</h1>
+    <p><b>Cientistas anunciam marco histórico: a descoberta do teletransporte, potencialmente revolucionando viagens e distribuição global</b></p>
+    <br><br>
+    <p>Em um anúncio que está prestes a mudar o curso da história da humanidade, cientistas de renome internacional revelaram hoje uma descoberta de proporções épicas: o teletransporte. Sim, você leu corretamente - aquela fantasia de ficção científica que há muito tempo habitava apenas as páginas de livros e as telas de cinema agora se tornou uma realidade tangível.
+        Após décadas de pesquisa intensiva e experimentação meticulosa, uma equipe de físicos teóricos liderada pelo renomado Dr. Alexander Martinez, da Universidade de Cambridge, finalmente quebrou as barreiras que separavam o mundo da imaginação do mundo da ciência. Em uma coletiva de imprensa emocionante realizada na sede da universidade, o Dr. Martinez e sua equipe detalharam os fundamentos e implicações deste avanço revolucionário.
+        O teletransporte, explicaram os cientistas, é agora possível através da aplicação de princípios fundamentais da física quântica e da teoria da relatividade de Einstein. Utilizando avanços extraordinários em campos como a manipulação de partículas subatômicas e a compreensão dos fenômenos de entrelaçamento quântico, os pesquisadores conseguiram desenvolver um sistema que pode digitalizar a estrutura de um objeto ou organismo e recriá-lo em outro local.
+        Embora ainda em seus estágios iniciais, os benefícios potenciais desta descoberta são verdadeiramente insondáveis. Imagine um mundo onde as longas e cansativas viagens de avião se tornam instantâneas e sem esforço, onde a distribuição de suprimentos médicos e humanitários para áreas remotas é realizada em questão de segundos, e onde a exploração do espaço sideral se torna não apenas possível, mas prática
+        No entanto, com essas possibilidades emocionantes vêm também questões éticas, legais e filosóficas complexas. O que significa verdadeiramente ser "teletransportado"? Existe uma continuidade da consciência entre o "original" e o "cópia" criada no destino? E como essa tecnologia será regulamentada para garantir sua utilização responsável e ética? 
+        Essas são perguntas que agora ocupam não apenas as mentes dos cientistas, mas também dos líderes governamentais, filósofos e teólogos em todo o mundo. A humanidade está diante de uma encruzilhada, onde as possibilidades são tão vastas quanto o universo e tão complexas quanto a própria vida.
+        Em meio a todas essas incertezas, uma coisa é clara: o teletransporte é mais do que apenas uma façanha tecnológica. É um testemunho do poder da mente humana para desvendar os segredos do cosmos e moldar seu próprio destino. Este é um momento que será lembrado nos anais da história como o dia em que a humanidade deu um salto gigantesco em direção às estrelas.
+        À medida que nos aventuramos nesse novo território desconhecido, uma coisa é certa: o futuro nunca pareceu tão emocionante.</p>
+        <br><br>
+   <img src="C:\Users\Samsung\Downloads\cientistas desc a86bfccb-04f4-422c-880d-6128835ea210.png">
+
+ </div>
+
+</body>
+
+ <style>
+  body {
+        margin: 0px;
+        padding: 0px;
+    } 
+
+    .cabecalho {
+        padding: 30px;
+        background: linear-gradient(to left, #4845f5, cyan);
+    }
+
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 2;
+        display: none;
+    }
+
+    .sidenav {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 3;
+        top: 0;
+        left: 0;
+        background-color: #111;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+    }
+
+    .sidenav a {
+        padding: 10px 15px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+    }
+
+    .sidenav a:hover {
+        color: #f1f1f1;
+    }
+
+    .sidenav .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+    }
+
+    #main {
+        transition: margin-left 0.5s;
+        padding: 16px;
+        position: absolute;
+    }
+
+    .menu-opcao {
+        font-family: 'Open Sans';
+        padding-top: 500px;
+    }
+
+  .noticia{
+    font-family: 'Open Sans' ;
+    text-align: center;
+  }
+
+  p{
+    font-size: 22px;
+  }
+  </style>
+
+
+   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+</html>

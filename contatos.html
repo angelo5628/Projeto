@@ -12,28 +12,32 @@
 </head>
 <body>
     <header class="cabecalho">
-        <div class="navbar" onclick="toggleMenu()" id="navbar">
-          <div class="tudodentro">
-            <div class="barra"></div>
-            <div class="barra"></div>
-            <div class="barra"></div>
-            <a href="#" class="menu-opcao">Jogos</a>
-            <a href="#" class="menu-opcao">Esportes</a>
-            <a href="#" class="menu-opcao">Política <br>Internacional</a>
-            <a href="#" class="menu-opcao">Ciência e <br>Tecnologia</a>
-            <a href="#" class="menu-opcao">Saúde</a>
-            <a href="#" class="menu-opcao">Assuntos do <br>momento</a>
-            <a href="#" class="menu-opcao">Economia e <br>Finanças</a>
-            <a href="#" class="menu-opcao">Meio Ambiente e <br>Sustentabilidade</a>
-            <a href="#" class="menu-opcao">Educação</a>
-            <a href="#" class="menu-opcao">Moda e Estilo</a>
-            <a href="#" class="menu-opcao">História e Cultura</a>
-            <a href="#" class="menu-opcao">Artes e Literatura</a>
-            <a href="testeimput.html" class="menu-opcao">teste</a>
-          </div>
+
+        <div class="overlay" onclick="closeNav()"></div>
+  
+        <div id="mySidenav" class="sidenav">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <a href="jogos.html" class="menu-opcao">Jogos</a>
+          <a href="esportes.html" class="menu-opcao">Esportes</a>
+          <a href="#" class="menu-opcao">Política <br>Internacional</a>
+          <a href="#" class="menu-opcao">Ciência e <br>Tecnologia</a> 
+          <a href="saude.html" class="menu-opcao">Saúde</a>
+          <a href="#" class="menu-opcao">Assuntos do <br>momento</a>
+          <a href="#" class="menu-opcao">Economia e <br>Finanças</a>
+          <a href="meioambiente.html" class="menu-opcao">Meio Ambiente e <br>Sustentabilidade</a>
+          <a href="#" class="menu-opcao">Educação</a>
+          <a href="moda.html" class="menu-opcao">Moda e Estilo</a>
+          <a href="#" class="menu-opcao">História e Cultura</a>
+          <a href="cidade.html" class="menu-opcao">Artes e Literatura</a>
+          <a href="contatos.html" class="menu-opcao">Contatos</a>
         </div>
   
+        <div id="main">
+          <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+        </div>
+        
         <center><a href="index.html"><img class="logo" src="https://i.ibb.co/xGJPjT0/pressnewssemfundo.png"></a></center>
+  
       </header>
   
       <center><div class="image-container">
@@ -44,6 +48,9 @@
         <img id="random-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDe_y8ATwOpICqLFlMlRT4ekQPNW_mcxFtHFKDoxdZ4-qD0RcFuoYya7KkN7LZGcf03g&usqp=CAU">
     </div></center>
   
+    <div style="padding-top: 70px;"></div>
+    
+
     <div class="container">
         <h2>Enviar Mensagem</h2>
         
@@ -74,26 +81,19 @@
 
 
     <script>
-        function toggleMenu() {
-          var navbar = document.getElementById('navbar');
-          var menuOpcoes = document.getElementsByClassName('menu-opcao');
-          var closeBtn = document.getElementById('close-btn');
-          var i;
-      
-          if (navbar.style.width === '200px') {
-            navbar.style.width = '50px';
-            for (i = 0; i < menuOpcoes.length; i++) {
-              menuOpcoes[i].classList.remove('active');
-            } 
-          } else {
-            navbar.style.width = '200px';
-            for (i = 0; i < menuOpcoes.length; i++) {
-              menuOpcoes[i].classList.add('active');
-            }
-          }
-          
+        function openNav() {
+          document.getElementById("mySidenav").style.width = "250px";
+          document.getElementById("main").style.marginLeft = "250px";
+          document.querySelector(".overlay").style.display = "block";
         }
-      </script>
+        
+        function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+          document.getElementById("main").style.marginLeft= "0";
+          document.querySelector(".overlay").style.display = "none";
+        }
+    </script>
+
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         var images = [
@@ -132,55 +132,70 @@
 
 <style>
     body {
-        margin: 0;
-        padding: 0;
-    }
+        margin: 0px;
+        padding: 0px;
+    } 
 
     .cabecalho {
         padding: 30px;
         background: linear-gradient(to left, #4845f5, cyan);
     }
 
-    .navbar {
-        width: 50px;
+    .overlay {
         position: fixed;
         top: 0;
         left: 0;
-        bottom: 0;
-        padding-top: 20px;
-        transition: width 0.5s;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 2;
+        display: none;
     }
 
-    .tudodentro {
-        cursor: pointer;
+    .sidenav {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 3;
+        top: 0;
+        left: 0;
+        background-color: #111;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
     }
 
-    .barra {
-        width: 30px;
-        height: 4px;
-        background-color: #ffffff;
-        margin: 6px auto;
-        transition: background-color 0.5s;
+    .sidenav a {
+        padding: 10px 15px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+    }
+
+    .sidenav a:hover {
+        color: #f1f1f1;
+    }
+
+    .sidenav .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+    }
+
+    #main {
+        transition: margin-left 0.5s;
+        padding: 16px;
+        position: absolute;
     }
 
     .menu-opcao {
-        display: none;
-        color: #000000;
-        text-decoration: none;
-        text-align: left;
-        padding: 20px;
-        transition: background-color 0.5s;
-        font-family: monospace;
-        background-color: rgb(255, 255, 255);
-        font-size: 15px;
-    }
-
-    .menu-opcao.active {
-        display: block;
-    }
-
-    .menu-opcao:hover {
-        background-color: #555;
+    font-family: 'Open Sans';
+    
+    padding-top: 500px;
     }
 
     .image-container {

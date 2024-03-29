@@ -50,22 +50,59 @@
     }
   </script>
 
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+      var images = [
+          'https://casafreitas2.vteximg.com.br/arquivos/ids/262306/Banner%20principal%201300X300.jpg?v=638127592836830000',
+          'https://cdn-repercussaoparanhana.nuneshost.com/wp-content/uploads/2021/08/THE-PETIT-1300X300.png',
+          'https://casafreitas2.vteximg.com.br/arquivos/ids/255366/1300x300.png?v=638070759354630000',
+          ''
+      ];
+
+      var randomIndex = Math.floor(Math.random() * images.length);
+      var randomImage = images[randomIndex];
+
+      var imgElement = document.getElementById('random-image');
+      var closeBtn = document.getElementById('close-btn');
+
+      imgElement.src = randomImage;
+
+      closeBtn.addEventListener('click', function() {
+          imgElement.src = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMIAAAEDCAMAAABQ/CumAAAAA1BMVEX///+nxBvIAAAASElEQVR4nO3BAQ0AAADCoPdPbQ43oAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIB7A8VJAAEcmy75AAAAAElFTkSuQmCC';
+          closeBtn.style.display = 'none';
+      });
+  });
+</script> 
+
 <body>
    
  <div class="noticia">
-    <h1>Cientistas Anunciam Avanço Revolucionário na Tecnologia de Teletransporte</h1>
-    <p><b>Cientistas anunciam marco histórico: a descoberta do teletransporte, potencialmente revolucionando viagens e distribuição global</b></p>
+  <br><br>
+    <h1>Cientistas Anunciam Avanço Revolucionário na
+       Tecnologia de Teletransporte</h1>
+       <p class="descricao"><b>Cientistas anunciam marco histórico: a descoberta do teletransporte, potencialmente revolucionando viagens e distribuição global</b></p>
+       <br><br>
+
+       <div class="image-container">
+        <span class="close-btn" id="close-btn">×</span>
+        <img id="random-image" src="https://casafreitas2.vteximg.com.br/arquivos/ids/262306/Banner%20principal%201300X300.jpg?v=638127592836830000">
+        <img id="random-image" src="https://cdn-repercussaoparanhana.nuneshost.com/wp-content/uploads/2021/08/THE-PETIT-1300X300.png">
+        <img id="random-image" src="https://casafreitas2.vteximg.com.br/arquivos/ids/255366/1300x300.png?v=638070759354630000">
+        <img id="random-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDe_y8ATwOpICqLFlMlRT4ekQPNW_mcxFtHFKDoxdZ4-qD0RcFuoYya7KkN7LZGcf03g&usqp=CAU">
+    </div>
     <br><br>
-    <p>Em um anúncio que está prestes a mudar o curso da história da humanidade, cientistas de renome internacional revelaram hoje uma descoberta de proporções épicas: o teletransporte. Sim, você leu corretamente - aquela fantasia de ficção científica que há muito tempo habitava apenas as páginas de livros e as telas de cinema agora se tornou uma realidade tangível.
-        Após décadas de pesquisa intensiva e experimentação meticulosa, uma equipe de físicos teóricos liderada pelo renomado Dr. Alexander Martinez, da Universidade de Cambridge, finalmente quebrou as barreiras que separavam o mundo da imaginação do mundo da ciência. Em uma coletiva de imprensa emocionante realizada na sede da universidade, o Dr. Martinez e sua equipe detalharam os fundamentos e implicações deste avanço revolucionário.
-        O teletransporte, explicaram os cientistas, é agora possível através da aplicação de princípios fundamentais da física quântica e da teoria da relatividade de Einstein. Utilizando avanços extraordinários em campos como a manipulação de partículas subatômicas e a compreensão dos fenômenos de entrelaçamento quântico, os pesquisadores conseguiram desenvolver um sistema que pode digitalizar a estrutura de um objeto ou organismo e recriá-lo em outro local.
-        Embora ainda em seus estágios iniciais, os benefícios potenciais desta descoberta são verdadeiramente insondáveis. Imagine um mundo onde as longas e cansativas viagens de avião se tornam instantâneas e sem esforço, onde a distribuição de suprimentos médicos e humanitários para áreas remotas é realizada em questão de segundos, e onde a exploração do espaço sideral se torna não apenas possível, mas prática
-        No entanto, com essas possibilidades emocionantes vêm também questões éticas, legais e filosóficas complexas. O que significa verdadeiramente ser "teletransportado"? Existe uma continuidade da consciência entre o "original" e o "cópia" criada no destino? E como essa tecnologia será regulamentada para garantir sua utilização responsável e ética? 
+  
+    <p>Em um anúncio que está prestes a mudar o curso da história da humanidade,<b> cientistas de renome internacional </b> hoje uma descoberta de proporções épicas: o teletransporte. Sim, você leu corretamente - aquela fantasia de ficção científica que há muito tempo habitava apenas as páginas de livros e as telas de cinema agora se tornou uma realidade tangível.<br><br>
+        Após décadas de pesquisa intensiva e experimentação meticulosa, uma equipe de físicos teóricos liderada pelo <b> renomado Dr. Alexander Martinez</b>, da Universidade de Cambridge, finalmente quebrou as barreiras que separavam o mundo da imaginação do mundo da ciência. Em uma coletiva de imprensa emocionante realizada na sede da universidade, o Dr. Martinez e sua equipe detalharam os fundamentos e implicações deste avanço revolucionário.<br><br>
+        O teletransporte, explicaram os cientistas, é agora possível através da aplicação de princípios<b> fundamentais da física quântica e da teoria da relatividade de Einstein.</b> Utilizando avanços extraordinários em campos como a <b>manipulação de partículas subatômicas</b> e a compreensão dos fenômenos de entrelaçamento quântico, os pesquisadores conseguiram desenvolver um sistema que pode digitalizar a estrutura de um objeto ou organismo e recriá-lo em outro local.<br><br>
+        Embora ainda em seus estágios iniciais, os benefícios potenciais desta descoberta são verdadeiramente insondáveis. Imagine um mundo onde as longas e cansativas viagens de avião se tornam instantâneas e sem esforço, onde a distribuição de suprimentos médicos e humanitários para áreas remotas é realizada em questão de segundos, e onde a exploração do espaço sideral se torna não apenas possível, mas prática<br><br>
+        No entanto, com essas possibilidades emocionantes vêm também questões éticas, legais e filosóficas complexas. O que significa verdadeiramente ser "teletransportado"? Existe uma continuidade da consciência entre o "original" e o "cópia" criada no destino? E como essa tecnologia será regulamentada para garantir sua utilização responsável e ética? <br><br>
         Essas são perguntas que agora ocupam não apenas as mentes dos cientistas, mas também dos líderes governamentais, filósofos e teólogos em todo o mundo. A humanidade está diante de uma encruzilhada, onde as possibilidades são tão vastas quanto o universo e tão complexas quanto a própria vida.
-        Em meio a todas essas incertezas, uma coisa é clara: o teletransporte é mais do que apenas uma façanha tecnológica. É um testemunho do poder da mente humana para desvendar os segredos do cosmos e moldar seu próprio destino. Este é um momento que será lembrado nos anais da história como o dia em que a humanidade deu um salto gigantesco em direção às estrelas.
+        Em meio a todas essas incertezas, uma coisa é clara<b>: o teletransporte é mais do que apenas uma façanha tecnológica.</b> É um testemunho do poder da mente humana para desvendar os segredos do cosmos e moldar seu próprio destino. Este é um momento que será lembrado nos anais da história como o dia em que a humanidade deu um salto gigantesco em direção às estrelas.
         À medida que nos aventuramos nesse novo território desconhecido, uma coisa é certa: o futuro nunca pareceu tão emocionante.</p>
         <br><br>
-   <img src="C:\Users\Samsung\Downloads\cientistas desc a86bfccb-04f4-422c-880d-6128835ea210.png">
+   <img class="cientista" src="C:\Users\Samsung\Downloads\cientistas desc a86bfccb-04f4-422c-880d-6128835ea210.png">
+       
 
  </div>
 
@@ -140,12 +177,48 @@
 
   .noticia{
     font-family: 'Open Sans' ;
-    text-align: center;
+    position:absolute;
+    left: 350px;
+    text-align: left;
+   width: 60%;
   }
 
   p{
     font-size: 22px;
   }
+
+   .descricao{
+     font-size:  15px; ;
+   }
+
+  .cientista{
+    width: 1000px;
+    height: 900px;
+  }
+
+  .image-container {
+        position: relative;
+        top: 10px;
+        width: 1000px;
+        height: 200px;
+        object-fit: cover;
+        overflow: hidden;
+    }
+
+    #random-image {
+        width: 100%;
+        height: auto;
+    }
+
+    .close-btn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 20px;
+        color: #fff;
+        cursor: pointer;
+    }
+
   </style>
 
 

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assuntos do Momento </title>
+    <link rel="icon" type="image/x-icon" href="https://i.ibb.co/sWJqFBd/pressnewzinhosemfundo.png">
+</head>
+
+<header class="cabecalho">
+
+    <div class="overlay" onclick="closeNav()"></div>
+
+    <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="jogos.html" class="menu-opcao">Jogos</a>
+    <a href="esportes.html" class="menu-opcao">Esportes</a>
+    <a href="#" class="menu-opcao">Política <br>Internacional</a>
+    <a href="#" class="menu-opcao">Ciência e <br>Tecnologia</a> 
+    <a href="saude.html" class="menu-opcao">Saúde</a>
+    <a href="#" class="menu-opcao">Assuntos do <br>momento</a>
+    <a href="#" class="menu-opcao">Economia e <br>Finanças</a>
+    <a href="#" class="menu-opcao">Meio Ambiente e <br>Sustentabilidade</a>
+    <a href="#" class="menu-opcao">Educação</a>
+    <a href="moda.html" class="menu-opcao">Moda e Estilo</a>
+    <a href="#" class="menu-opcao">História e Cultura</a>
+    <a href="cidade.html" class="menu-opcao">Artes e Literatura</a>
+    <a href="contatos.html" class="menu-opcao">Contatos</a>
+    </div>
+
+    <div id="main">
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+    </div>
+    
+    <center><a href="index.html"><img class="logo" src="https://i.ibb.co/xGJPjT0/pressnewssemfundo.png"></a></center>
+
+</header>
+    
+<body>
+   <center> <h1>Assuntos do Momento </h1> </center>
+   <br><br>
+   
+   <!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrossel de Imagens</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="carousel-container">
+        <div class="carousel-slide">
+            <img src="https://s3.sa-east-1.amazonaws.com/static.activodeporte.com/brasil/uploads/2022/11/10131456/male-soccer-football-player-training-in-action-isolated-on-gradient-studio-in-neon-light-1-690x515.jpg" alt="Imagem 1">
+            <img src="imagem2.jpg" alt="Imagem 2">
+            <img src="imagem3.jpg" alt="Imagem 3">
+        </div>
+        <button class="prev" onclick="prevSlide()">&#10094;</button>
+        <button class="next" onclick="nextSlide()">&#10095;</button>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+
+</body>
+
+<script>
+    function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+    document.querySelector(".overlay").style.display = "block";
+    }
+    
+    function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+    document.querySelector(".overlay").style.display = "none";
+    }
+</script>
+
+<script>
+
+let slideIndex = 0;
+let intervalId;
+
+showSlide(slideIndex);
+
+function prevSlide() {
+    clearInterval(intervalId);
+    showSlide(slideIndex -= 1);
+}
+
+function nextSlide() {
+    clearInterval(intervalId);
+    showSlide(slideIndex += 1);
+}
+
+function showSlide(index) {
+    const slides = document.querySelectorAll('.carousel-slide img');
+    if (index < 0) {
+        slideIndex = slides.length - 1;
+    }
+    if (index >= slides.length) {
+        slideIndex = 0;
+    }
+    slides.forEach(slide => slide.style.display = 'none');
+    slides[slideIndex].style.display = 'block';
+}
+
+// Mudança automática de slide a cada 3 segundos
+intervalId = setInterval(nextSlide, 3000);
+
+</script>
+
+
+<style>
+  .body{
+    overflow: hidden;
+  
+  }
+
+.cabecalho {
+    padding: 35px;
+    background: linear-gradient(to left, #4845f5, cyan);
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    display: none;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left 0.5s;
+    padding: 16px;
+    position: absolute;
+}
+
+.menu-opcao {
+    font-family: 'Open Sans';
+    padding-top: 500px;
+} 
+
+
+.carousel-container {
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-slide {
+    display: flex;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: auto;
+    display: none;
+}
+
+.carousel-slide img:first-child {
+    display: block;
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    z-index: 1;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+
+
+ </style>
+
+
+   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+
+</html>

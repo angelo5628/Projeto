@@ -80,39 +80,8 @@
     }
 </script>
 
-<script>
 
-let slideIndex = 0;
-let intervalId;
 
-showSlide(slideIndex);
-
-function prevSlide() {
-    clearInterval(intervalId);
-    showSlide(slideIndex -= 1);
-}
-
-function nextSlide() {
-    clearInterval(intervalId);
-    showSlide(slideIndex += 1);
-}
-
-function showSlide(index) {
-    const slides = document.querySelectorAll('.carousel-slide img');
-    if (index < 0) {
-        slideIndex = slides.length - 1;
-    }
-    if (index >= slides.length) {
-        slideIndex = 0;
-    }
-    slides.forEach(slide => slide.style.display = 'none');
-    slides[slideIndex].style.display = 'block';
-}
-
-// Mudança automática de slide a cada 3 segundos
-intervalId = setInterval(nextSlide, 3000);
-
-</script>
 
 
 <style>

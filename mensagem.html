@@ -1,10 +1,19 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="mensagemenviada.html">
 <title>Enviando Mensagem...</title>
+</head>
+
+<body>
+
+  <div class="textocarregando" id="loadingText">Sua mensagem está sendo enviada...</div>
+
+</body>
+
 <style>
   body {
     font-family: Arial, sans-serif;
@@ -14,21 +23,17 @@
     height: 100vh;
     margin: 0;
   }
+
   .textocarregando {
     font-size: 24px;
     color: #333;
   }
 </style>
-</head>
-<body>
-<div class="textocarregando" id="loadingText">Sua mensagem está sendo enviada...</div>
 
 <script>
-  // Simulação de envio de mensagem (tempo de espera de 3 segundos)
   setTimeout(function() {
-    // Redirecionar para outra página após o envio (substitua "outra_pagina.html" pelo URL desejado)
     window.location.href = "mensagemenviada.html";
-  }, 3000); // 3000 milissegundos = 3 segundos
+  }, 2000);
 </script>
-</body>
+
 </html>
